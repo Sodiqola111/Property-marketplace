@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Agent Profile | Property Marketplace</title>
+<meta name="description" content="Professional demo real-estate marketplace front end for property discovery, enquiries and listings.">
+<meta property="og:title" content="Agent Profile | Property Marketplace"><meta property="og:description" content="Demo real-estate marketplace.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="responsive.css">
+<link rel="stylesheet" href="dashboard.css">
+<link rel="stylesheet" href="app.js">
+<link rel="stylesheet" href="properties.js">
+</head><body>
+<header class="site-header"><div class="container nav">
+<a class="logo" href="index.html"><span class="logo-mark">P</span> Property<span style="color:var(--accent)">Market</span></a>
+<button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+<nav class="nav-links" id="navLinks"><a class="" href="index.html">Home</a><a class="" href="properties.html">Properties</a><a class="" href="properties.html?listingType=For%20Rent">For Rent</a><a class="" href="properties.html?listingType=For%20Sale">For Sale</a><a class="active" href="agents.html">Agents</a><a class="" href="about.html">About</a><a class="" href="contact.html">Contact</a></nav>
+<div class="nav-actions"><a class="btn btn-outline" href="login.html">Login</a><a class="btn btn-accent" href="list-property.html">List Your Property</a></div>
+</div></header>
+<main><section class="page-hero"><div class="container"><h1>Demo Agent Profile</h1><p>Sample profile layout ready for verified agent information.</p></div></section><section class="section"><div class="container about-grid"><div><div class="agent-avatar" style="margin:0">D</div><h2>Demo Agent</h2><p class="muted">Demo Agency · Demo Location</p><p>This profile is illustrative. Connect authenticated agent records before publishing professional credentials, awards, phone numbers or other claims.</p><h3>Areas served</h3><p>Demo Area · Demo District · Demo City</p></div><div><h2>Listed Properties</h2><div class="cards" style="grid-template-columns:1fr 1fr" id="agentProperties"></div></div></div></section></main>
+<script>document.addEventListener("DOMContentLoaded",()=>{document.querySelector("#agentProperties").innerHTML=properties.slice(0,2).map(card).join("")})</script>
+<footer class="site-footer"><div class="container"><div class="footer-grid">
+<div><div class="logo" style="color:#fff"><span class="logo-mark">P</span> Property<span style="color:#e8bd7d">Market</span></div><p>Professional front-end marketplace demo for discovering, saving and enquiring about property listings.</p></div>
+<div><h3>Explore</h3><a href="properties.html">Properties</a><a href="properties.html?listingType=For%20Rent">For Rent</a><a href="properties.html?listingType=For%20Sale">For Sale</a><a href="agents.html">Agents</a></div>
+<div><h3>Company</h3><a href="about.html">About</a><a href="contact.html">Contact</a><a href="dashboard.html">Dashboard</a></div>
+<div><h3>Owners</h3><a href="list-property.html">List Your Property</a><a href="login.html">Login</a><a href="register.html">Register</a></div>
+</div><div class="copyright">© 2026 PropertyMarket demo. All property, agent and testimonial content is illustrative until connected to verified backend data.</div></div></footer>
+<div id="toast" class="toast" role="status" aria-live="polite"></div><button id="backTop" class="backtop" aria-label="Back to top">↑</button>
+<script src="js/properties.js"></script><script src="js/app.js"></script></body></html>

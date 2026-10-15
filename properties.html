@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Properties | Property Marketplace</title>
+<meta name="description" content="Professional demo real-estate marketplace front end for property discovery, enquiries and listings.">
+<meta property="og:title" content="Properties | Property Marketplace"><meta property="og:description" content="Demo real-estate marketplace.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="responsive.css">
+<link rel="stylesheet" href="dashboard.css">
+<link rel="stylesheet" href="app.js">
+<link rel="stylesheet" href="properties.js">
+</head>
+<body>
+<header class="site-header"><div class="container nav">
+<a class="logo" href="index.html"><span class="logo-mark">P</span> Property<span style="color:var(--accent)">Market</span></a>
+<button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+<nav class="nav-links" id="navLinks"><a class="" href="index.html">Home</a><a class="active" href="properties.html">Properties</a><a class="" href="properties.html?listingType=For%20Rent">For Rent</a><a class="" href="properties.html?listingType=For%20Sale">For Sale</a><a class="" href="agents.html">Agents</a><a class="" href="about.html">About</a><a class="" href="contact.html">Contact</a></nav>
+<div class="nav-actions"><a class="btn btn-outline" href="login.html">Login</a><a class="btn btn-accent" href="list-property.html">List Your Property</a></div>
+</div></header>
+
+<main><section class="page-hero"><div class="container"><h1>Find Properties</h1><p>Search and filter illustrative demo listings. No listing, price, address or availability shown here should be treated as verified real-world data.</p></div></section>
+<section class="section"><div class="container">
+<form class="filters" id="filterForm">
+<div class="field"><label>Listing type</label><select name="listingType"><option value="">Any</option><option>For Rent</option><option>For Sale</option></select></div>
+<div class="field"><label>Location</label><input name="location" placeholder="Search location"></div><div class="field"><label>Property type</label><select name="propertyType"><option value="">Any</option><option>Apartment</option><option>House</option><option>Duplex</option><option>Detached House</option><option>Semi-Detached House</option><option>Terrace</option><option>Bungalow</option><option>Land</option><option>Commercial Property</option><option>Office</option><option>Shop</option></select></div>
+<div class="field"><label>Min price</label><input name="minPrice" type="number"></div><div class="field"><label>Max price</label><input name="maxPrice" type="number"></div><div class="field"><label>Bedrooms</label><select name="bedrooms"><option value="">Any</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></div><div class="field"><label>Bathrooms</label><select name="bathrooms"><option value="">Any</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></div><div class="field"><label>Furnished</label><select name="furnished"><option value="">Any</option><option value="true">Furnished</option><option value="false">Unfurnished</option></select></div>
+<div class="filter-actions"><button class="btn btn-primary" type="submit">Apply Filters</button><button class="btn btn-outline" type="button" id="clearFilters">Clear</button></div>
+</form>
+<div class="toolbar"><div class="toolbar-left"><strong id="resultCount">Demo properties</strong></div><div class="toolbar-right"><select id="sort" aria-label="Sort properties"><option value="">Newest</option><option value="low">Price: Low to High</option><option value="high">Price: High to Low</option><option value="popular">Most Popular</option></select><button class="view-btn active" data-view="grid">▦</button><button class="view-btn" data-view="list">☷</button></div></div>
+<div class="cards list-grid" id="propertyGrid"></div></div></section></main>
+
+<footer class="site-footer"><div class="container"><div class="footer-grid">
+<div><div class="logo" style="color:#fff"><span class="logo-mark">P</span> Property<span style="color:#e8bd7d">Market</span></div><p>Professional front-end marketplace demo for discovering, saving and enquiring about property listings.</p></div>
+<div><h3>Explore</h3><a href="properties.html">Properties</a><a href="properties.html?listingType=For%20Rent">For Rent</a><a href="properties.html?listingType=For%20Sale">For Sale</a><a href="agents.html">Agents</a></div>
+<div><h3>Company</h3><a href="about.html">About</a><a href="contact.html">Contact</a><a href="dashboard.html">Dashboard</a></div>
+<div><h3>Owners</h3><a href="list-property.html">List Your Property</a><a href="login.html">Login</a><a href="register.html">Register</a></div>
+</div><div class="copyright">© 2026 PropertyMarket demo. All property, agent and testimonial content is illustrative until connected to verified backend data.</div></div></footer>
+<div id="toast" class="toast" role="status" aria-live="polite"></div><button id="backTop" class="backtop" aria-label="Back to top">↑</button>
+<script src="js/properties.js"></script><script src="js/app.js"></script></body></html>
